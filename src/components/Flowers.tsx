@@ -1,29 +1,17 @@
+import Product from "./Product";
+
 export default function Flowers() {
-  const imageDirectory = "./images/";
-  const imagePaths = [
-    "All Flowers.jpg",
-    "B Shot.jpg",
-    "B Simple.jpg",
-    "Multi Shot.jpg",
-    "Multi Simple.jpg",
-    "P Shot.jpg",
-    "P Simple.jpg",
-    "R Shot.jpg",
-    "R Simple.jpg",
-    "Tara 1.jpg",
-    "Tara 2.jpg",
-    "Tara 3.5.jpg",
-    "Tara 3.jpg",
-    "Tara 4.jpg",
-    "W Shot.jpg",
-    "W Simple.jpg",
-    "Y shot.jpg",
-    "Y Simple.jpg",
-  ].map((image) => imageDirectory + image);
+  const bluePaths = ["./images/B Shot.jpg", "./images/B Simple.jpg"];
+  const pinkPaths = ["./images/P Shot.jpg", "./images/P Simple.jpg", "./images/Tara 2.jpg", "./images/Tara 4.jpg"];
+  const redPaths = ["./images/R Shot.jpg", "./images/R Simple.jpg"];
+  const whitePaths = ["./images/W Shot.jpg", "./images/W Simple.jpg"];
+  const yellowPaths = ["./images/Y shot.jpg", "./images/Y Simple.jpg"];
+  const multiPaths = ["./images/Multi Shot.jpg", "./images/Multi Simple.jpg"];
 
   function getImagePath() {
-    return imagePaths.map((path) => (
-      <img key={path} src={path} alt={path} className="flower-img" />
+    const flowerTypes = {'blue': bluePaths, 'pink': pinkPaths, 'red': redPaths, 'white': whitePaths, 'yellow': yellowPaths, 'multi': multiPaths};
+    return Object.entries(flowerTypes).map(([type, flowers]) => (
+      <Product key={type} flowers={flowers} type={type}/>
     ));
   }
 

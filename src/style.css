@@ -6,6 +6,22 @@
   padding: 1rem;
 }
 
+.flower-grouped {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.individual-flower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .flower-img {
   width: 20%;
   height: auto;
