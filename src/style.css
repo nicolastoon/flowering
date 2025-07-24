@@ -1,0 +1,14 @@
+.flower-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flower-img {
+  width: 20%;
+  height: auto;
+  border-radius: 2rem;
+  border: 2px solid black;
+}
