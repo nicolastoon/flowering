@@ -1,5 +1,5 @@
 export default function Title() {
     return (
-        <h1>Product Page</h1>
+        <h1>Paper Petals</h1>
     );
 }

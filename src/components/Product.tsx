@@ -1,18 +1,21 @@
 interface ProductProps {
-  flowers: string[];
+  flowers: { main: string; sub: string };
   type: string;
-};
+}
 
-export default function Product(props: ProductProps) {
+export default function Product({ flowers, type }: ProductProps) {
   return (
-    <div key={props.type} className="flower-grouped">
-      <h2>{props.type}</h2>
-      {props.flowers.map((path: string) => (
-        <div key={path} className="individual-flower">
-          <img src={path} alt={path} className="flower-img" />
-          <small>{path}</small>
-        </div>
-      ))}
+    <div className="flower-img-wrapper">
+      <img
+        src={flowers.main}
+        className="flower-img main"
+        alt={`${type} flower`}
+      />
+      <img
+        src={flowers.sub}
+        className="flower-img sub"
+        alt={`${type} flower`}
+      />
     </div>
   );
 }

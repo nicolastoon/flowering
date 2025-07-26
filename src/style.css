@@ -1,18 +1,10 @@
 .flower-collection {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.flower-grouped {
-  display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  justify-content: center;
 }
 
 .individual-flower {
@@ -22,9 +14,34 @@
   gap: 0.5rem;
 }
 
-.flower-img {
-  width: 20%;
-  height: auto;
-  border-radius: 2rem;
-  border: 2px solid black;
+.flower-img-wrapper {
+  position: relative;
+  display: inline-block;
 }
+
+.flower-img {
+  max-width: 50%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.main {
+  display: block;
+  transition: opacity 0.5s;
+}
+
+.sub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.flower-img-wrapper:hover .flower-img.sub {
+  opacity: 1;
+}
+
