@@ -6,16 +6,18 @@
 
 .flower-collection {
   display: flex;
-  width: -webkit-fill-available;
   flex-direction: row;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .flower-img-wrapper {
   position: relative;
   display: inline-block;
   width: 20%;
+  height: 100%;
   margin: -1px;
 }
 
