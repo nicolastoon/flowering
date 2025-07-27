@@ -1,8 +1,8 @@
 export default function Title() {
   return (
-    <div id='header'>
-      <h1 id="title">some title here</h1>
-      <h3 id="subtitle">some subtitle here</h3>
+    <div id='header' onClick={() => window.location.href = '../index.html'}>
+      <h1 id="title">paper petals</h1>
+      <h3 id="subtitle">made and designed by tara goller</h3>
     </div>
   );
 }
