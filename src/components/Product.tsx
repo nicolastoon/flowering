@@ -9,7 +9,7 @@ interface ProductProps {
 function expandImage(imgId: string) {
   console.log("Expanding image");
   const img = document.getElementById(imgId) as HTMLDivElement;
-  img.style.width = "100%";
+  img.style.width = "40%";
 }
 
 function shrinkOthers(imgId: string) {
@@ -17,7 +17,7 @@ function shrinkOthers(imgId: string) {
   console.log("Shrinking other images");
   collection.forEach((i) => {
     if (i.id !== imgId) {
-      (i as HTMLDivElement).style.width = "10%";
+      (i as HTMLDivElement).style.width = "15%";
     }
   });
 }
