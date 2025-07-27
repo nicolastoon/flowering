@@ -1,6 +1,3 @@
-import type { BaseSyntheticEvent } from "react";
-import { useState } from "react";
-
 interface ProductProps {
   flowers: { main: string; sub: string };
   type: string;
