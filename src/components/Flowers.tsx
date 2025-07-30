@@ -1,42 +1,50 @@
 import Product from "./Product";
 
 export default function Flowers() {
-  const bluePaths = {
-    main: "./B Simple.jpg",
-    sub: "./B Shot.jpg",
-  };
-  const pinkPaths = {
-    main: "./P Simple.jpg",
-    sub: "./Tara 2.jpg",
-  };
-  const redPaths = {
-    main: "./R Simple.jpg",
-    sub: "./R Shot.jpg",
-  };
-  const whitePaths = {
-    main: "./W Simple.jpg",
-    sub: "./W Shot.jpg",
-  };
-  const yellowPaths = {
-    main: "./Y Simple.jpg",
-    sub: "./Y Shot.jpg",
-  };
-  const multiPaths = {
-    main: "./Multi Simple.jpg",
-    sub: "./Multi Shot.jpg",
-  };
+  const flowerTypes = [
+    {
+      main: "./B Simple.jpg",
+      sub: "./B Shot.jpg",
+      type: "blue",
+      name: "Azure",
+    },
+    {
+      main: "./P Simple.jpg",
+      sub: "./Tara 2.jpg",
+      type: "pink",
+      name: "Blossom",
+    },
+    {
+      main: "./R Simple.jpg",
+      sub: "./R Shot.jpg",
+      type: "red",
+      name: "Rouge", 
+    },
+    {
+      main: "./W Simple.jpg",
+      sub: "./W Shot.jpg",
+      type: "white",
+      name: "Silk",
+    },
+    {
+      main: "./Y Simple.jpg",
+      sub: "./Y Shot.jpg",
+      type: "yellow",
+      name: "Radiance",
+    },
+    {
+      main: "./Multi Simple.jpg",
+      sub: "./Multi Shot.jpg",
+      type: "multi",
+      name: "Aurora",
+    },
+  ];
 
   function getImagePath() {
-    const flowerTypes = {
-      multi: multiPaths,
-      blue: bluePaths,
-      pink: pinkPaths,
-      red: redPaths,
-      white: whitePaths,
-      yellow: yellowPaths,
-    };
-    return Object.entries(flowerTypes).map(([type, flowers]) => (
-      <Product key={type} flowers={flowers} type={type} />
+    return flowerTypes.map((flower) => (
+      <>
+        <Product key={flower.type} flower={flower} />
+      </>
     ));
   }
 

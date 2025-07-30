@@ -1,3 +1,7 @@
+body {
+  font-family: 'Garamond', serif;
+}
+
 .flower-collection {
   position: relative;
   display: flex;
@@ -11,6 +15,7 @@
   position: relative;
   display: inline-block;
   width: 20%;
+  align-items: center;
   transition: all 0.5s ease-in-out;
 }
 
@@ -39,6 +44,11 @@
   opacity: 1;
 }
 
+.flower-img-wrapper:hover .flower-label {
+  opacity: 1;
+  transition: opacity 0.5s 1s;
+}
+
 #header {
   display: flex;
   position: absolute;
@@ -46,10 +56,10 @@
   left: 2vh;
   flex-direction: column;
   background-color: transparent;
+  font-family: inherit;
   text-align: left;
   margin: 0;
   z-index: 1;
-  font-family: 'Garamond', serif;
   cursor: pointer;
 }
 
@@ -59,4 +69,12 @@
 
 #subtitle {
   font-size: 0.9rem;
+}
+
+.flower-label {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
 }

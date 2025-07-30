@@ -1,6 +1,7 @@
+import Label from "./Label";
+
 interface ProductProps {
-  flowers: { main: string; sub: string };
-  type: string;
+  flower: { main: string; sub: string; type: string; name: string };
 }
 
 function expandImage(imgId: string) {
@@ -27,29 +28,30 @@ function resetImages() {
   });
 }
 
-export default function Product({ flowers, type }: ProductProps) {
+export default function Product({ flower }: ProductProps) {
   return (
     <div
       className="flower-img-wrapper"
       onMouseOver={() => {
-        expandImage(`flower-${type}`);
-        shrinkOthers(`flower-${type}`);
+        expandImage(`flower-${flower.type}`);
+        shrinkOthers(`flower-${flower.type}`);
       }}
       onMouseOut={() => {
         resetImages();
       }}
-      id={`flower-${type}`}
+      id={`flower-${flower.type}`}
     >
       <img
-        src={flowers.main}
+        src={flower.main}
         className="flower-img main"
-        alt={`${type} flower`}
+        alt={`${flower.type} flower`}
       />
       <img
-        src={flowers.sub}
+        src={flower.sub}
         className="flower-img sub"
-        alt={`${type} flower`}
+        alt={`${flower.type} flower`}
       />
+      <Label key={flower.name} name={flower.name} />
     </div>
   );
 }
