@@ -18,13 +18,13 @@ export default function Flowers() {
       main: "./R Simple.jpg",
       sub: "./R Shot.jpg",
       type: "red",
-      name: "Rouge", 
+      name: "Rouge",
     },
     {
-      main: "./W Simple.jpg",
-      sub: "./W Shot.jpg",
-      type: "white",
-      name: "Silk",
+      main: "./Multi Simple.jpg",
+      sub: "./Multi Shot.jpg",
+      type: "multi",
+      name: "Aurora",
     },
     {
       main: "./Y Simple.jpg",
@@ -33,18 +33,16 @@ export default function Flowers() {
       name: "Radiance",
     },
     {
-      main: "./Multi Simple.jpg",
-      sub: "./Multi Shot.jpg",
-      type: "multi",
-      name: "Aurora",
+      main: "./W Simple.jpg",
+      sub: "./W Shot.jpg",
+      type: "white",
+      name: "Silk",
     },
   ];
 
   function getImagePath() {
     return flowerTypes.map((flower) => (
-      <>
-        <Product key={flower.type} flower={flower} />
-      </>
+      <Product key={flower.type} flower={flower} />
     ));
   }
 

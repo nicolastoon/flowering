@@ -5,14 +5,12 @@ interface ProductProps {
 }
 
 function expandImage(imgId: string) {
-  console.log("Expanding image");
   const img = document.getElementById(imgId) as HTMLDivElement;
   img.style.width = "40%";
 }
 
 function shrinkOthers(imgId: string) {
   const collection = document.querySelectorAll(".flower-img-wrapper");
-  console.log("Shrinking other images");
   collection.forEach((i) => {
     if (i.id !== imgId) {
       (i as HTMLDivElement).style.width = "15%";
@@ -21,7 +19,6 @@ function shrinkOthers(imgId: string) {
 }
 
 function resetImages() {
-  console.log("Resetting images");
   const collection = document.querySelectorAll(".flower-img-wrapper");
   collection.forEach((i) => {
     (i as HTMLDivElement).style.width = "20%";
