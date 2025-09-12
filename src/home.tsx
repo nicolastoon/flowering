@@ -22,14 +22,16 @@ const banners = [
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-      <div className="banner" id="top-banner">
+    <section id="home-page">
+      <div className="banner root" id="top-banner">
         <Header />
         <InfoBanner info={banners[0]} />
         {/* <img id="top-banner-flower-img" src="./img/flower-temp.png" alt="flower showcase"/> */}
       </div>
-      <div className="banner" id="bottom-banner">
+      <div className="banner root" id="bottom-banner">
         <InfoBanner info={banners[1]} />
         {/* <img id="bottom-banner-flower-img" src="./img/recollections.png" alt="flower showcase"/> */}
       </div>
+    </section>
   </StrictMode>
 );

@@ -18,14 +18,18 @@
 body {
   color: #6B705C;
   margin: 0;
+  overflow-y: hidden;
 }
 
 .button {
   cursor: pointer;
 }
 
-.banner {
+.root {
   padding: 5vh 8rem;
+}
+
+.banner {
   display: flex;
   flex-direction: column;
 }
@@ -82,6 +86,54 @@ body {
 #bottom-banner-content {
   align-items: flex-end;
   text-align: right;
+}
+
+.page-title {
+  font: 128px "Rochester";
+  position: absolute;
+  height: 1em;
+  bottom: 0;
+}
+
+#gallery-page {
+  height: 70vh;
+}
+
+#gallery-content {
+  height: 100%;
+}
+
+.flower-img {
+  max-width: 300px; 
+}
+
+.flower-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flower-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  height: fit-content;
+  align-self: flex-end;
+  width: 100%;
+  padding: 0.5em 0.5em;
+}
+
+#gallery-photos {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 2em;
+}
+
+#commission-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 60vw;
+  text-wrap: pretty;
 }
 
 /* #top-banner-flower-img {
