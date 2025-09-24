@@ -23,8 +23,8 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="banner" id="gallery-content">
-      <div className="banner-content">
+    <div className="banner">
+      <div id="gallery-content" className="banner-content">
         <span className="banner-title tenor-sans">handmade collections</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
