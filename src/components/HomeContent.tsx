@@ -1,7 +1,5 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import Header from "./components/Header.tsx";
-import InfoBanner from "./components/InfoBanner.tsx";
+import Header from "./Header.tsx";
+import InfoBanner from "./InfoBanner.tsx";
 
 const banners = [
   {
@@ -20,8 +18,8 @@ const banners = [
   },
 ];
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+export default function HomeContent() {
+  return (
     <section id="home-page">
       <div className="banner root" id="top-banner">
         <Header />
@@ -33,5 +31,5 @@ createRoot(document.getElementById("root")!).render(
         {/* <img id="bottom-banner-flower-img" src="./img/recollections.png" alt="flower showcase"/> */}
       </div>
     </section>
-  </StrictMode>
-);
+  );
+}

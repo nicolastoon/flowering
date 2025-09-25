@@ -4,11 +4,10 @@ import { hover, unhover } from "../hover.ts";
 export default function CommissionForm() {
   let [selectedIndex, setSelectedIndex] = useState(1);
 
-  function next() {
-    setSelectedIndex(selectedIndex + 1);
-    const sections = document.getElementsByClassName("commission-form-section");
-    sections.forEach((s) => {});
-  }
+  // function next() {
+  //   setSelectedIndex(selectedIndex + 1);
+  //   const sections = document.getElementsByClassName("commission-form-section");
+  // }
 
   return (
     <div className="tenor-sans" id="commission-form-container">
@@ -42,8 +41,8 @@ export default function CommissionForm() {
         <button
           className="tenor-sans banner-btn button"
           onClick={() => setSelectedIndex(selectedIndex - 1)}
-          onMouseEnter={(e) => hover("back")}
-          onMouseLeave={(e) => unhover("back")}
+          onMouseEnter={() => hover("back")}
+          onMouseLeave={() => unhover("back")}
         >
           <div className="button">
             <span className="btn-text" id="back-link-head">
@@ -57,8 +56,8 @@ export default function CommissionForm() {
         <button
           className="tenor-sans banner-btn button"
           onClick={() => setSelectedIndex(selectedIndex + 1)}
-          onMouseEnter={(e) => hover("next")}
-          onMouseLeave={(e) => unhover("next")}
+          onMouseEnter={() => hover("next")}
+          onMouseLeave={() => unhover("next")}
         >
           <div className="button">
             <span className="btn-text" id="next-link-head">

@@ -1,6 +1,6 @@
 {
   "name": "flowering",
-  "homepage": "",
+  "homepage": "/flowering/#",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,8 @@
   "dependencies": {
     "bootstrap": "^5.3.7",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

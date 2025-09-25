@@ -4,14 +4,14 @@ export default function Header() {
   return (
     <div className="page-header">
       <div
-        onClick={() => window.open("/flowering/")}
+        onClick={() => window.location.href = "/"}
         className="button"
         id="home-btn"
       >
         <span>paper petals</span>
       </div>
       <div
-        onClick={() => window.open("/flowering/gallery/")}
+        onClick={() => window.location.href = "#/gallery"}
         onMouseEnter={() => hover("gallery")}
         onMouseLeave={() => unhover("gallery")}
         className="tenor-sans header-btn button"
@@ -25,7 +25,7 @@ export default function Header() {
         </span>
       </div>
       <div
-        onClick={() => window.open("/flowering/commission/")}
+        onClick={() => window.location.href = "#/commission"}
         onMouseEnter={() => hover("commission")}
         onMouseLeave={() => unhover("commission")}
         className="tenor-sans header-btn button"

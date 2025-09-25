@@ -1,3 +1,4 @@
+import Header from "./Header.tsx";
 import FlowerImage from "./FlowerImage.tsx";
 
 export default function Gallery() {
@@ -23,32 +24,36 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="banner">
-      <div id="gallery-content" className="banner-content">
-        <span className="banner-title tenor-sans">handmade collections</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="90"
-          height="50"
-          viewBox="0 0 90 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="square"
-          className="lucide lucide-minus-icon lucide-minus"
-        >
-          <path d="M0 12h90" />
-        </svg>
-        <div id="gallery-photos">
-          {flowers.map((flower) => (
-            <FlowerImage
-              key={flower.id}
-              src={flower.src}
-              label={flower.label}
-            />
-          ))}
+    <section className="root" id="gallery-page">
+      <Header />
+      <div className="banner">
+        <div id="gallery-content" className="banner-content">
+          <span className="banner-title tenor-sans">handmade collections</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="90"
+            height="50"
+            viewBox="0 0 90 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="square"
+            className="lucide lucide-minus-icon lucide-minus"
+          >
+            <path d="M0 12h90" />
+          </svg>
+          <div id="gallery-photos">
+            {flowers.map((flower) => (
+              <FlowerImage
+                key={flower.id}
+                src={flower.src}
+                label={flower.label}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <span className="page-title">gallery</span>
+    </section>
   );
 }
