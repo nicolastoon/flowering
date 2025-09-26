@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className="page-header">
       <div
-        onClick={() => window.location.href = "/"}
+        onClick={() => window.location.href = "#"}
         className="button"
         id="home-btn"
       >

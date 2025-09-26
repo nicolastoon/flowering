@@ -16,8 +16,9 @@
 }
 
 body {
-  color: #6B705C;
+  color: #6b705c;
   margin: 0;
+  overflow-y: hidden;
 }
 
 .button {
@@ -59,7 +60,7 @@ body {
 
 #top-banner {
   height: 50vh;
-  background-color: #F0EFEB;
+  background-color: #f0efeb;
 }
 
 .banner-content {
@@ -70,7 +71,7 @@ body {
 }
 
 .banner-btn {
-  background-color: #DBD0BD;
+  background-color: #dbd0bd;
   border: none;
   box-shadow: 0 0 2px darkslategray;
   color: inherit;
@@ -112,7 +113,7 @@ body {
 }
 
 .flower-img {
-  max-width: 300px; 
+  max-width: 300px;
 }
 
 .flower-container {
@@ -139,9 +140,10 @@ body {
 #commission-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 4em;
-  height: 70vh;
+  height: 60vh;
+  margin-top: 10vh;
+  justify-content: space-between;
 }
 
 #commission-text {
@@ -159,6 +161,14 @@ body {
 
   input {
     height: 2rem;
+    padding: 0 0.7em;
+    font-size: 0.7em;
+    border: 2px solid black;
+    border-radius: 8px;
+  }
+
+  input#additional-info-input {
+    height: 6rem;
   }
 }
 
@@ -168,7 +178,9 @@ body {
 }
 
 .commission-form-section.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .commission-form-field {
@@ -181,17 +193,20 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
 }
 
-/* #top-banner-flower-img {
-  position: absolute;
-  transform: rotate(-35deg);
-  width: 40vw;
-  top: -49px;
-  left: 720px;
-} 
-  
-#bottom-banner-img {
+.form-btn {
+  margin: 0;
+}
 
-} */
+.lucide-dot {
+  transform: scale(2);
+  opacity: 0.4;
+  transition: all 0.25s ease-in-out;
+}
 
+.lucide-dot.active {
+  opacity: 1;
+}
