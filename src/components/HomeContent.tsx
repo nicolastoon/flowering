@@ -1,4 +1,3 @@
-import Header from "./Header.tsx";
 import InfoBanner from "./InfoBanner.tsx";
 
 const banners = [
@@ -22,7 +21,6 @@ export default function HomeContent() {
   return (
     <section id="home-page">
       <div className="banner root" id="top-banner">
-        <Header />
         <InfoBanner info={banners[0]} />
         {/* <img id="top-banner-flower-img" src="./img/flower-temp.png" alt="flower showcase"/> */}
       </div>
