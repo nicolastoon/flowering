@@ -3,8 +3,8 @@ import CommissionForm from "./CommissionForm";
 
 export default function CommissionContent() {
   return (
-    <section className="root" id="commission-page">
-      <div className="banner-content" id="commission-container">
+    <section id="commission-page">
+      <div className="banner" id="commission-container">
         <div id="commission-text">
           <span className="banner-title tenor-sans">
             in need of a bespoke bouquet?
@@ -22,6 +22,7 @@ export default function CommissionContent() {
         </div>
         <CommissionForm />
       </div>
+
       <span className="page-title">commission</span>
     </section>
   );

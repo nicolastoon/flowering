@@ -21,7 +21,7 @@ export default function Header() {
           gallery
         </span>
         <span className="btn-text" id="gallery-link-tail">
-          gallery
+          gallery 
         </span>
       </div>
       <div

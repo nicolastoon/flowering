@@ -7,6 +7,7 @@ const banners = [
     desc: "the beautiful colors and flowers can be seen from afar, but every precise fold, crease, and bend make it elaborate and genuine",
     buttonText: "view gallery",
     buttonLink: "/flowering/gallery/",
+    imgLink: "/flowering/img/flower-banner.png"
   },
   {
     id: "bottom-banner",
@@ -14,20 +15,15 @@ const banners = [
     desc: "literally. no withering, no molding, no seasonal changes. just don’t water them.",
     buttonText: "commission now",
     buttonLink: "/flowering/commission/",
+    imgLink: "/flowering/img/recollections-banner.png"
   },
 ];
 
 export default function HomeContent() {
   return (
     <section id="home-page">
-      <div className="banner root" id="top-banner">
-        <InfoBanner info={banners[0]} />
-        {/* <img id="top-banner-flower-img" src="./img/flower-temp.png" alt="flower showcase"/> */}
-      </div>
-      <div className="banner root" id="bottom-banner">
-        <InfoBanner info={banners[1]} />
-        {/* <img id="bottom-banner-flower-img" src="./img/recollections.png" alt="flower showcase"/> */}
-      </div>
+      <InfoBanner info={banners[0]} />
+      <InfoBanner info={banners[1]} />
     </section>
   );
 }
