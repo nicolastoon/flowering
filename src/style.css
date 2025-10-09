@@ -251,7 +251,7 @@ section {
   height: fit-content;
   border-radius: 8px;
   background: var(--background-color);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .form-input {
@@ -272,6 +272,7 @@ section {
 .form-textarea {
   padding: 0.5em 0.7em;
   height: 6rem;
+  resize: none; 
 }
 
 #form-sections {
