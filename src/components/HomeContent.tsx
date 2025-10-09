@@ -7,7 +7,7 @@ const banners = [
     desc: "the beautiful colors and flowers can be seen from afar, but every precise fold, crease, and bend make it elaborate and genuine",
     buttonText: "view gallery",
     buttonLink: "/flowering/gallery/",
-    imgLink: "/flowering/img/flower-banner.png"
+    imgLink: "/flowering/img/flower-banner.png",
   },
   {
     id: "bottom-banner",
@@ -15,7 +15,7 @@ const banners = [
     desc: "literally. no withering, no molding, no seasonal changes. just don’t water them.",
     buttonText: "commission now",
     buttonLink: "/flowering/commission/",
-    imgLink: "/flowering/img/recollections-banner.png"
+    imgLink: "/flowering/img/recollections-banner.png",
   },
 ];
 

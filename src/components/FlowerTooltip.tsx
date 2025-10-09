@@ -28,9 +28,15 @@ export default function FlowerTooltip() {
   }, [mousePosition]);
 
   return (
-    <div id="flower-tooltip">
-      <span id="flower-name"></span>
-      <p className="tenor-sans" id="flower-desc"></p>
-    </div>
+    <>
+      <div id="flower-tooltip">
+        <span id="flower-name"></span>
+        <p className="tenor-sans" id="flower-desc"></p>
+      </div>
+      <div id="mobile-flower-tooltip">
+        <span id="flower-name"></span>
+        <p className="tenor-sans" id="flower-desc"></p>
+      </div>
+    </>
   );
 }
