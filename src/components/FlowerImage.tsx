@@ -1,5 +1,3 @@
-import { Dot } from "lucide-react";
-
 type Flower = {
   id: string;
   desc: string;
@@ -100,15 +98,6 @@ export default function FlowerImage({ id, desc, src, hover }: Flower) {
           src={hover}
         />
       </div>
-      {/* <div id="mobile-gallery-dots-container">
-          {Array.from({ length: 6 }, (_, i) => (
-            <Dot
-              key={i + 1}
-              className={selectedIndex === i + 1 ? "active" : ""}
-              id={`dot-${i + 1}`}
-            />
-          ))}
-        </div> */}
     </>
   );
 }
