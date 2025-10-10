@@ -10,17 +10,19 @@ export default function HeaderButton({ page, onClick }: HeaderButtonProp) {
   return (
     <div
       onClick={onClick}
-      onMouseEnter={() => hover(page)}
-      onMouseLeave={() => unhover(page)}
+      onPointerEnter={() => hover(page)}
+      onPointerLeave={() => unhover(page)}
       className="tenor-sans header-btn button"
       id={`${page}-btn`}
     >
-      <span className="btn-text" id={`${page}-link-head`}>
-        {page}
-      </span>
-      <span className="btn-text" id={`${page}-link-tail`}>
-        {page}
-      </span>
+      <div className="button">
+        <span className="btn-text" id={`${page}-link-head`}>
+          {page.startsWith('mobile-') ? page.substring(7) :page}
+        </span>
+        <span className="btn-text" id={`${page}-link-tail`}>
+          {page}
+        </span>
+      </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ type BannerInfo = {
     buttonText: string;
     buttonLink: string;
     imgLink: string;
+    mobileImg: string;
   };
 };
 
@@ -17,6 +18,19 @@ export default function InfoBanner({ info }: BannerInfo) {
     <div className="banner home-banner" id={`${info.id}`}>
       <div className="home-background-container">
         <img className="home-background-image" src={info.imgLink}></img>
+        {info.mobileImg ? (
+          <img
+            className="home-background-image"
+            id="mobile-background-image"
+            src={info.mobileImg}
+          ></img>
+        ) : (
+          <img
+            className="home-background-image"
+            id="mobile-background-image"
+            src={info.imgLink}
+          ></img>
+        )}
       </div>
       <div className="home-banner-text" id={`${info.id}-text`}>
         <span className="banner-title tenor-sans">{info.title}</span>
@@ -25,8 +39,8 @@ export default function InfoBanner({ info }: BannerInfo) {
         <button
           className="tenor-sans banner-btn button"
           onClick={() => window.open(info.buttonLink)}
-          onMouseEnter={() => hover(info.buttonText)}
-          onMouseLeave={() => unhover(info.buttonText)}
+          onPointerEnter={() => hover(info.buttonText)}
+          onPointerLeave={() => unhover(info.buttonText)}
         >
           <div className="button">
             <span className="btn-text" id={`${info.buttonText}-link-head`}>

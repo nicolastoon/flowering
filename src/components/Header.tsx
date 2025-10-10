@@ -52,14 +52,14 @@ export default function Header() {
       </div>
       <div id="mobile-nav">
         <HeaderButton
-          page="gallery"
+          page="mobile-gallery"
           onClick={() => {
             window.location.href = "#/gallery";
             setNav(false);
           }}
         />
         <HeaderButton
-          page="commission"
+          page="mobile-commission"
           onClick={() => {
             window.location.href = "#/commission";
             setNav(false);

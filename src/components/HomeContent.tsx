@@ -8,6 +8,7 @@ const banners = [
     buttonText: "view gallery",
     buttonLink: "/flowering/gallery/",
     imgLink: "/flowering/img/flower-banner.png",
+    mobileImg: ""
   },
   {
     id: "bottom-banner",
@@ -16,6 +17,7 @@ const banners = [
     buttonText: "commission now",
     buttonLink: "/flowering/commission/",
     imgLink: "/flowering/img/recollections-banner.png",
+    mobileImg: "/flowering/img/recollections-banner-2.png"
   },
 ];
 

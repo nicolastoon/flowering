@@ -112,8 +112,8 @@ export default function CommissionForm() {
               setSelectedIndex(selectedIndex - 1);
             }
           }}
-          onMouseEnter={() => hover("back")}
-          onMouseLeave={() => unhover("back")}
+          onPointerEnter={() => hover("back")}
+          onPointerLeave={() => unhover("back")}
         >
           <div className="button">
             <span className="btn-text" id="back-link-head">
@@ -142,8 +142,8 @@ export default function CommissionForm() {
               setSelectedIndex(selectedIndex + 1);
             }
           }}
-          onMouseEnter={() => hover("next")}
-          onMouseLeave={() => unhover("next")}
+          onPointerEnter={() => hover("next")}
+          onPointerLeave={() => unhover("next")}
         >
           <div className="button">
             <span className="btn-text" id="next-link-head">
@@ -161,8 +161,8 @@ export default function CommissionForm() {
           onClick={() => {
             setSelectedIndex(N_SECTIONS + 1);
           }}
-          onMouseEnter={() => hover("submit")}
-          onMouseLeave={() => unhover("submit")}
+          onPointerEnter={() => hover("submit")}
+          onPointerLeave={() => unhover("submit")}
         >
           <div className="button">
             <span className="btn-text" id="submit-link-head">
@@ -180,8 +180,8 @@ export default function CommissionForm() {
           onClick={() => {
             setSelectedIndex(1);
           }}
-          onMouseEnter={() => hover("resubmit")}
-          onMouseLeave={() => unhover("resubmit")}
+          onPointerEnter={() => hover("resubmit")}
+          onPointerLeave={() => unhover("resubmit")}
         >
           <div className="button">
             <span className="btn-text" id="resubmit-link-head">

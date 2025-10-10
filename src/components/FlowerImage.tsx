@@ -71,11 +71,11 @@ export default function FlowerImage({ id, desc, src, hover }: Flower) {
     <>
       <div
         className="flower-container"
-        onMouseEnter={(e) => {
+        onPointerEnter={(e) => {
           hoverImage(e.currentTarget);
           openTooltip(e, id, desc);
         }}
-        onMouseLeave={(e) => {
+        onPointerLeave={(e) => {
           unhoverImage(e.currentTarget);
           closeTooltip();
         }}
